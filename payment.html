@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Cinema Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="seat-body">
+
+<header class="navbar">
+    <h1>🎬 Cinema Portal</h1>
+    <nav>
+        <a href="dashboard.html">Movies</a>
+        <a href="#">Bookings</a>
+        <a href="#">Profile</a>
+        <a href="login.html" class="logout">Logout</a>
+    </nav>
+</header>
+
+<section class="movie-info">
+    <h2>Payment Details</h2>
+</section>
+
+<div class="payment-box">
+
+    <p><strong>Movie:</strong> <span id="payMovie"></span></p>
+    <p><strong>Seats:</strong> <span id="paySeats"></span></p>
+    <p><strong>Total Amount:</strong> ₹ <span id="payTotal"></span></p>
+
+    <form onsubmit="return completePayment()">
+        <input type="text" id="cardName" placeholder="Card Holder Name">
+        <input type="text" id="cardNumber" placeholder="Card Number (16 digits)">
+        <input type="text" id="expiry" placeholder="MM/YY">
+        <input type="text" id="cvv" placeholder="CVV">
+
+        <button type="submit">Pay Now</button>
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="seat-body">
+
+<header class="navbar">
+    <h1>🎬 Cinema Portal</h1>
+    <nav>
+        <a href="dashboard.html">Movies</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="#">Profile</a>
+        <a href="login.html" class="logout">Logout</a>
+    </nav>
+</header>
+
+<section class="movie-info">
+    <h2 id="movieTitle"></h2>
+</section>
+
+<div class="screen-container">
+    <div class="screen"></div>
+    <p>SCREEN</p>
+</div>
+
+<section class="seat-container" id="seatContainer"></section>
+
+<div class="summary">
+    <p>Selected Seats: <span id="seatCount">0</span></p>
+    <p>Total Price: ₹ <span id="totalPrice">0</span></p>
+    <button onclick="proceedPayment()">Proceed to Payment</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
