@@ -2,40 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment - Cinema Portal</title>
+    <title>Payment</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="seat-body">
+<body class="dashboard-body">
 
 <header class="navbar">
     <h1>🎬 Cinema Portal</h1>
     <nav>
         <a href="dashboard.html">Movies</a>
-        <a href="#">Bookings</a>
+        <a href="bookings.html">Bookings</a>
         <a href="#">Profile</a>
-        <a href="login.html" class="logout">Logout</a>
+        <a href="#" onclick="logout()" class="logout">Logout</a>
     </nav>
 </header>
 
-<section class="movie-info">
-    <h2>Payment Details</h2>
-</section>
+<h2 class="page-title">Payment Details</h2>
 
-<div class="payment-box">
+<div class="payment-card">
 
     <p><strong>Movie:</strong> <span id="payMovie"></span></p>
     <p><strong>Seats:</strong> <span id="paySeats"></span></p>
     <p><strong>Total Amount:</strong> ₹ <span id="payTotal"></span></p>
 
-    <form onsubmit="return completePayment()">
-        <input type="text" id="cardName" placeholder="Card Holder Name">
-        <input type="text" id="cardNumber" placeholder="Card Number (16 digits)">
-        <input type="text" id="expiry" placeholder="MM/YY">
-        <input type="text" id="cvv" placeholder="CVV">
+    <form id="paymentForm">
+
+        <label>Cardholder Name</label>
+        <input type="text" id="cardName" placeholder="Enter name on card">
+
+        <label>Card Number</label>
+        <input type="text" id="cardNumber" maxlength="16" placeholder="16-digit card number">
+
+        <label>Expiry (MM/YY)</label>
+        <input type="text" id="expiry" maxlength="5" placeholder="MM/YY">
+
+        <label>CVV</label>
+        <input type="password" id="cvv" maxlength="3" placeholder="3-digit CVV">
 
         <button type="submit">Pay Now</button>
+
     </form>
 
 </div>

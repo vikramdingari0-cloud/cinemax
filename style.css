@@ -322,51 +322,64 @@ body:not(.home-body):not(.dashboard-body):not(.seat-body) {
 /* ===============================
    PAYMENT PAGE
 =============================== */
-.payment-box {
-    background: #1c1c1c;
-    padding: 30px;
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payment-card {
     width: 350px;
     margin: 30px auto;
+    background: #1f1f1f;
+    padding: 25px;
     border-radius: 10px;
-    text-align: center;
 }
 
-.payment-box p {
-    margin-bottom: 10px;
+.payment-card p {
+    margin: 8px 0;
 }
 
-.payment-box input {
+.payment-card label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.payment-card input {
     width: 100%;
-    margin: 10px 0;
-    padding: 10px;
+    padding: 8px;
+    margin-top: 5px;
     border-radius: 5px;
     border: none;
+    outline: none;
 }
 
-.payment-box button {
+.payment-card button {
     width: 100%;
+    margin-top: 18px;
     padding: 10px;
     background: #ff4d4d;
     border: none;
-    color: white;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.payment-box button:hover {
-    background: #e60000;
+    color: white;
+    font-weight: bold;
 }
 
 /* ===============================
    CONFIRMATION PAGE
 =============================== */
 .confirmation-box {
-    background: #1c1c1c;
-    padding: 40px;
     width: 350px;
-    margin: 100px auto;
+    margin: 60px auto;
+    background: #1f1f1f;
+    padding: 30px;
     border-radius: 10px;
     text-align: center;
+}
+
+.confirmation-box p {
+    margin: 10px 0;
 }
 
 .confirmation-box button {
@@ -374,13 +387,9 @@ body:not(.home-body):not(.dashboard-body):not(.seat-body) {
     padding: 10px 20px;
     background: #ff4d4d;
     border: none;
-    color: white;
     border-radius: 5px;
+    color: white;
     cursor: pointer;
-}
-
-.confirmation-box button:hover {
-    background: #e60000;
 }
 /* SEARCH BAR */
 .filter-container {

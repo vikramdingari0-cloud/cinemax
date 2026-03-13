@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="seat-body">
+
+<header class="navbar">
+    <h1>🎬 Cinema Portal</h1>
+</header>
+
+<div class="confirmation-box">
+    <h2>🎉 Booking Confirmed!</h2>
+
+    <p><strong>Ticket ID:</strong> <span id="ticketID"></span></p>
+    <p><strong>Movie:</strong> <span id="confMovie"></span></p>
+    <p><strong>Seats Booked:</strong> <span id="confSeats"></span></p>
+    <p><strong>Total Paid:</strong> ₹ <span id="confTotal"></span></p>
+    <p><strong>Booking Date:</strong> <span id="confDate"></span></p>
+
+    <button onclick="goDashboard()">Back to Dashboard</button>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.getElementById("ticketID").innerText =
+        localStorage.getItem("ticketID") || "-";
+
+    document.getElementById("confMovie").innerText =
+        localStorage.getItem("selectedMovie") || "-";
+
+    document.getElementById("confSeats").innerText =
+        localStorage.getItem("seatCount") || "0";
+
+    document.getElementById("confTotal").innerText =
+        localStorage.getItem("totalPrice") || "0";
+
+    // Get latest booking date from bookings array
+    const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+    if (bookings.length > 0) {
+        const latestBooking = bookings[bookings.length - 1];
+        document.getElementById("confDate").innerText =
+            latestBooking.date || "-";
+    } else {
+        document.getElementById("confDate").innerText = "-";
+    }
+
+});
+
+// Back to dashboard
+function goDashboard() {
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
